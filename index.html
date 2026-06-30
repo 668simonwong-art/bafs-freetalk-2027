@@ -64,7 +64,7 @@
     max-width: 900px; margin: 0 auto; padding: 14px 20px;
   }
   .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .nav-logo svg { width: 36px; height: 36px; }
+  .nav-logo img.nav-logo-img { width: 52px; height: 52px; object-fit: contain; }
   .nav-brand { display: flex; flex-direction: column; }
   .nav-brand-main { color: #fff; font-size: 12px; font-weight: 900; letter-spacing: 2px; }
   .nav-brand-sub { color: var(--teal); font-size: 9px; font-weight: 700; letter-spacing: 3px; }
@@ -383,12 +383,7 @@
 <nav>
   <div class="nav-inner">
     <a href="https://lumosedu.hk" class="nav-logo">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="8,92 26,92 52,18 38,18" fill="white"/>
-        <polygon points="60,18 96,92 80,92 52,35" fill="white"/>
-        <path d="M55,42 L80,42 L80,54 L65,54 L65,70 L80,70 L80,82 L55,82 L50,82 L50,42 Z" fill="#1DB8A8"/>
-        <rect x="65" y="54" width="18" height="8" fill="#1DB8A8"/>
-      </svg>
+      <img src="logo_lumos_v2.png" alt="明道教育" class="nav-logo-img">
       <div class="nav-brand">
         <div class="nav-brand-main">明道教育</div>
         <div class="nav-brand-sub">LUMOS EDUCATION</div>
