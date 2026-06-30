@@ -290,6 +290,50 @@
   }
   .instructor-ig:hover { background: var(--teal-dim); }
 
+  /* ── CREDENTIAL BADGES ── */
+  .cred-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 24px; }
+  .cred-badge {
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(29,184,168,0.08); border: 1px solid rgba(29,184,168,0.35);
+    border-radius: 10px; padding: 10px 16px;
+    font-size: 13.5px; color: rgba(255,255,255,0.9); line-height: 1.4;
+  }
+  .cred-badge-icon { flex-shrink: 0; display: flex; align-items: center; }
+  .cred-badge-icon img { height: 36px; width: auto; border-radius: 4px; }
+  .cred-badge-text strong { display: block; color: var(--gold); font-size: 13px; font-weight: 900; }
+
+  /* ── DSE SCORE TABLE ── */
+  .score-table-wrap { margin: 28px 0; }
+  .score-table-title {
+    font-size: 13px; font-weight: 900; color: var(--gold); letter-spacing: 1px;
+    text-transform: uppercase; margin-bottom: 12px;
+  }
+  .score-table {
+    width: 100%; border-collapse: collapse; font-size: 14px;
+  }
+  .score-table th {
+    background: rgba(29,184,168,0.15); color: var(--teal);
+    font-size: 12px; font-weight: 900; letter-spacing: 1px;
+    padding: 8px 14px; text-align: left; border-bottom: 1px solid rgba(29,184,168,0.3);
+  }
+  .score-table td {
+    padding: 9px 14px; border-bottom: 1px solid rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.85);
+  }
+  .score-table tr:last-child td { border-bottom: none; }
+  .score-table .score-star { color: var(--gold); font-weight: 900; }
+  .score-table .score-pct { color: var(--teal); font-weight: 700; }
+
+  /* ── PHILOSOPHY QUOTE ── */
+  .philosophy-box {
+    margin-top: 28px; padding: 20px 24px;
+    border-left: 3px solid var(--gold);
+    background: rgba(212,175,55,0.06); border-radius: 0 10px 10px 0;
+    font-size: 14.5px; color: rgba(255,255,255,0.85); line-height: 1.7;
+    font-style: italic;
+  }
+  .philosophy-box span { display: block; margin-top: 10px; font-style: normal; font-size: 13px; color: var(--gold); font-weight: 700; }
+
   /* ── SOCIAL PROOF ── */
   .proof-row {
     display: grid; grid-template-columns: repeat(3, 1fr);
@@ -352,6 +396,19 @@
   }
   .btn-large:hover { background: var(--teal-light); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(29,184,168,0.55); }
   .final-cta-note { font-size: 13px; color: var(--text-dim); margin-top: 8px; }
+
+  /* ── FLOATING CTA ── */
+  .float-cta {
+    position: fixed; bottom: 24px; right: 24px; z-index: 999;
+    background: var(--teal); color: #fff;
+    font-size: 14px; font-weight: 900; letter-spacing: 0.5px;
+    padding: 14px 22px; border-radius: 40px;
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(29,184,168,0.55);
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+  }
+  .float-cta:hover { background: var(--teal-light); transform: translateY(-2px); }
 
   /* ── FOOTER ── */
   footer {
@@ -488,6 +545,82 @@
   </div>
 </section>
 
+<!-- ── INSTRUCTOR ── -->
+<section id="tutor">
+  <div class="container">
+    <p class="section-label">關於導師</p>
+    <h2 class="section-title">Simon Wong：學術與實戰兼備</h2>
+    <div class="divider"></div>
+    <div class="instructor-wrap">
+      <div class="instructor-photo-frame">
+        <img class="instructor-photo" src="simon_photo.jpg" alt="Simon Wong">
+        <div class="instructor-star-badge">⭐ DSE BAFS 5★★ × 6屆</div>
+      </div>
+      <div class="instructor-info">
+        <div class="instructor-name">Simon Wong</div>
+        <div class="instructor-title">明道教育 BAFS / 會計 導師｜@ace.acct.bafs</div>
+
+        <div class="cred-row">
+          <div class="cred-badge">
+            <div class="cred-badge-icon"><img src="CUHK logo.png" alt="CUHK"></div>
+            <div class="cred-badge-text">
+              <strong>CUHK 一級榮譽畢業</strong>
+              主修專業會計學 (PACC)｜Major GPA 3.7/4.0｜屢獲 Dean's List
+            </div>
+          </div>
+          <div class="cred-badge">
+            <div class="cred-badge-icon"><img src="CPAA logo.png" alt="CPA Australia"></div>
+            <div class="cred-badge-text">
+              <strong>CPA Australia 註冊會計師</strong>
+              Advanced Audit、Strategic Management 等 5 個核心單元取得 High Distinction
+            </div>
+          </div>
+        </div>
+
+        <div class="score-table-wrap">
+          <div class="score-table-title">🏆 6屆 DSE BAFS 實戰戰績（全有分紙作證）</div>
+          <table class="score-table">
+            <thead>
+              <tr><th>年份</th><th>分數</th><th>得分率</th><th>成績</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>2025 DSE</td><td>187 / 199</td><td class="score-pct">94%</td><td class="score-star">5★★</td></tr>
+              <tr><td>2024 DSE</td><td>186 / 199</td><td class="score-pct">93%</td><td class="score-star">5★★</td></tr>
+              <tr><td>2023 DSE</td><td>194 / 201</td><td class="score-pct">97%</td><td class="score-star">5★★</td></tr>
+              <tr><td>2022 DSE</td><td>179 / 209</td><td class="score-pct">86%</td><td class="score-star">5★★</td></tr>
+              <tr><td>2021 DSE</td><td>189 / 207</td><td class="score-pct">91%</td><td class="score-star">5★★</td></tr>
+              <tr><td>2013 DSE</td><td>180 / 193</td><td class="score-pct">93%</td><td class="score-star">5★★</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cred-badge" style="margin-top:16px; display:inline-flex;">
+          <div class="cred-badge-icon">🏫</div>
+          <div class="cred-badge-text">
+            <strong>HKDSE 2013 Best 5 — 31 分（考生 Top 1.1%）</strong>
+            BAFS 5★★｜Econ 5★｜ICT 5★｜中文 5★｜通識 5★
+          </div>
+        </div>
+
+        <div class="philosophy-box">
+          教 BAFS 而同你一齊落場考既補習導師，寥寥可數。而落場導師當中具會計師資格的，絕無僅有。只有落場，先明白考生每年面對既壓力同埋挑戰，第一時間將考試感受帶比下一屆考生。
+          <span>— Simon 教學理念：落場同行</span>
+        </div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:20px;">
+          <a href="https://www.instagram.com/ace.acct.bafs" class="instructor-ig" target="_blank">
+            📷 @ace.acct.bafs
+          </a>
+          <a href="https://wa.me/85254369440" class="instructor-ig" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" style="flex-shrink:0"><circle cx="16" cy="16" r="16" fill="#25D366"/><path d="M23.5 8.5A10.4 10.4 0 0 0 16 5.5a10.5 10.5 0 0 0-9.1 15.7L5.5 26.5l5.5-1.4A10.5 10.5 0 0 0 26.5 16 10.4 10.4 0 0 0 23.5 8.5zm-7.5 16a8.7 8.7 0 0 1-4.5-1.2l-.3-.2-3.3.9.9-3.2-.2-.3A8.8 8.8 0 1 1 16 24.5zm4.8-6.6c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.8 1.1-.3.2-.6 0a7.3 7.3 0 0 1-2.1-1.3 7.8 7.8 0 0 1-1.5-1.8c-.2-.3 0-.5.1-.6l.5-.5.2-.4v-.4l-.9-2.1c-.2-.5-.5-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.5 4 5 5 0 0 0 3 .6 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z" fill="#fff"/></svg>
+            WhatsApp Simon
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── SESSIONS ── -->
 <section id="sessions">
   <div class="container">
@@ -551,39 +684,6 @@
   </div>
 </section>
 
-<!-- ── INSTRUCTOR ── -->
-<section id="tutor">
-  <div class="container">
-    <p class="section-label">關於導師</p>
-    <h2 class="section-title">你嘅導師</h2>
-    <div class="divider"></div>
-    <div class="instructor-wrap">
-      <div class="instructor-photo-frame">
-        <img
-          class="instructor-photo"
-          src="https://lumos-production-bucket.s3.ap-southeast-1.amazonaws.com/user/USID-00003819/icon.jpg"
-          alt="Simon Wong"
-          onerror="this.style.display='none'"
-        >
-        <div class="instructor-star-badge">⭐ DSE BAFS 5★★ × 6年</div>
-      </div>
-      <div class="instructor-info">
-        <div class="instructor-name">Simon Wong</div>
-        <div class="instructor-title">明道教育 BAFS / 會計 導師｜@ace.acct.bafs</div>
-        <ul class="instructor-points">
-          <li>累計七年親身應考 DSE，其中已放榜年份全取 <strong style="color:var(--gold)">BAFS 5★★</strong>，全部有分紙 Po 上 IG 作證</li>
-          <li>筆記語言供中、英文選擇，適合本地及國際課程學生</li>
-          <li>教學重點：以「考試邏輯」出發，唔係死背，係教你點思考</li>
-          <li>明道教育駐場 BAFS 導師，學生遍佈各大中學</li>
-        </ul>
-        <a href="https://www.instagram.com/ace.acct.bafs" class="instructor-ig" target="_blank">
-          📷 @ace.acct.bafs
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ── SOCIAL PROOF ── -->
 <section>
   <div class="container">
@@ -598,6 +698,7 @@
       <div class="proof-card">
         <div class="proof-number teal">7</div>
         <div class="proof-label">年累積親身應考 DSE 經驗</div>
+        <div style="font-size:11.5px; color:rgba(255,255,255,0.45); margin-top:8px; line-height:1.6;">2013（中文卷）<br>2021 – 2026（英文卷）</div>
       </div>
       <div class="proof-card">
         <div class="proof-number" style="color:var(--gold)">免費</div>
@@ -615,24 +716,16 @@
     <div class="divider"></div>
     <div class="faq-list">
       <div class="faq-item">
-        <div class="faq-q">講座真係免費嗎？<span class="arrow">▼</span></div>
-        <div class="faq-a">係，完全免費！不需要繳付任何費用，填好表格確認即可出席。</div>
-      </div>
-      <div class="faq-item">
         <div class="faq-q">適合哪些同學參加？<span class="arrow">▼</span></div>
-        <div class="faq-a">適合 F.5 及 F.6 準備 2027 DSE 的同學。無論你目前 BAFS 成績如何，都歡迎參加。</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">需要帶什麼？<span class="arrow">▼</span></div>
-        <div class="faq-a">帶備筆記工具即可。導師會提供講義，出席更有機會獲贈會計概念試題集。</div>
+        <div class="faq-a">適合升中四至中六、準備 2027 – 2029 DSE 的同學。無論你目前 BAFS 成績如何，都歡迎參加。</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">兩個場地有分別嗎？<span class="arrow">▼</span></div>
         <div class="faq-a">內容完全相同，你只需選擇方便的地點及時間出席即可。觀塘及佐敦明道教育均設有冷氣課室。</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">可以選多於一場嗎？<span class="arrow">▼</span></div>
-        <div class="faq-a">原則上每位同學報名一場。如有特殊情況請在表格備注欄說明。</div>
+        <div class="faq-q">我目前成績處於中下遊，適合報名嗎？<span class="arrow">▼</span></div>
+        <div class="faq-a">適合。這不是一個教學課堂。不論你目前位置如何，基礎如何，均適合參與。</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">報名後如何確認？<span class="arrow">▼</span></div>
@@ -656,10 +749,13 @@
   </div>
 </section>
 
+<!-- ── FLOATING CTA ── -->
+<a href="https://lumosfreetalk2027.paperform.co/" class="float-cta" target="_blank">🎯 立即報名</a>
+
 <!-- ── FOOTER ── -->
 <footer>
   <p>明道教育 Lumos Education ｜ 學校註冊編號：622605</p>
-  <p style="margin-top:6px;">佐敦彌敦道221號恒福商業中心 1樓103-106室 ｜ <a href="tel:98558746">98558746</a></p>
+  <p style="margin-top:6px;">佐敦彌敦道221號恒福商業中心 1樓103-106室 ｜ <a href="https://wa.me/85298558746">98558746</a></p>
   <p style="margin-top:6px;"><a href="https://lumosedu.hk">lumosedu.hk</a></p>
   <p style="margin-top:14px; font-size:11px;">© 2026 Lumos Holding Company Limited. All Rights Reserved.</p>
 </footer>
